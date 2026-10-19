@@ -1,0 +1,11 @@
+# Windows bundled components
+
+The payload includes original ParentalApp code, Flutter/Dart runtime and asset notices, pinned npm dependencies with their installed licenses, Node's complete LICENSE notice, Python's embedded distribution with LICENSE.txt, and WinSW's MIT notice. Research-only upstream notices are retained for audit clarity; their presence does not mean GPL research implementations were included.
+
+Microsoft Visual C++ runtime files `msvcp140.dll`, `vcruntime140.dll` and `vcruntime140_1.dll` are copied unmodified from the installed Visual Studio Build Tools redistributable directory. Version 14.44.35211.0 is used for application-local deployment, with valid Microsoft Authenticode signatures. These remain Microsoft components, subject to the applicable Microsoft Software License Terms and licensed build-tool redistribution rights. They are not original ParentalApp code or open-source dependencies.
+
+Redistribution references: [Microsoft guidance](https://learn.microsoft.com/en-us/cpp/windows/redistributing-visual-cpp-files?view=msvc-170), [Visual Studio distributable list](https://learn.microsoft.com/en-us/visualstudio/releases/2022/redistribution), and [Flutter Windows deployment guidance](https://docs.flutter.dev/platform-integration/windows/building). No Microsoft SDK, compiler or build tools are shipped to household users. Windows 11 provides the OS and .NET Framework components used by the service host.
+
+Inno Setup 6.7.3 builds the installer under its published license; its compiled copyright/web notices are retained. This personal household development build uses its non-commercial mode. Commercial distribution/build use requires reviewing the publisher's commercial licensing guidance before release.
+
+Runtime provenance and limitations are in audit/windows-runtime-artifacts.json in the source and licenses/windows-runtime-artifacts.json in the payload. WinSW 2.12.0 is pinned from its official release but is unsigned upstream. Current Windows development builds sign the first-party EXEs and installer with a local development certificate; payload signing is recorded by the build scripts. This is not public publisher signing or clean-machine trust. Checksums do not establish publisher trust or replace signing/acceptance. Do not distribute private signing keys.
